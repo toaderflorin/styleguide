@@ -2,7 +2,7 @@ body {
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  font-size:14px;
+  font-size:15px;
   line-height: 1.7;
   font-weight: 400;
 }
@@ -18,17 +18,43 @@ body {
   height: 100%;
 }
 
+.parallax {
+  background-blend-mode: color-burn;
+  background-attachment: fixed;
+  background-image: url(https://images.pexels.com/photos/279/black-and-white-branches-tree-high.jpg?cs=srgb&dl=black-and-white-branches-tree-279.jpg&fm=jpg);
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-2px) scale(3);
+}
+
 .red {
   background-color: red;
   color: white;
 }
 
-.darkgray {
+.b-darkgray {
   background-color: #222;
   color: white;
 }
 
-.black {
+.b-black {
   background-color: black;
   color: white;
 }
@@ -40,14 +66,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.section {
-  background: white;
+section {
   color: #333;
   padding: 10px;
   margin: 0;
-}
-
-.content {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
@@ -57,7 +79,7 @@ body {
   height: 100px;
 }
 
-.lightgray {
+footer {
   margin: 0 auto;
   padding-top: 15px;
   padding-bottom: 15px;
